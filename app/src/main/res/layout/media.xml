@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView android:id="@+id/surfaceView1"
+        android:layout_width="320dp" android:layout_height="160dp"></SurfaceView>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageButton  android:id="@+id/button_play" android:src="@drawable/play" android:onClick="buttonClick"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+        <ImageButton  android:id="@+id/button_pause" android:src="@drawable/pause" android:onClick="buttonClick"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+        <ImageButton  android:id="@+id/button_stop" android:src="@drawable/stop" android:onClick="buttonClick"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+        <ImageButton  android:id="@+id/button_reset" android:src="@drawable/reset" android:onClick="buttonClick"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+    </LinearLayout>
+</LinearLayout>
