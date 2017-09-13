@@ -1,2 +1,4 @@
 include ':app'
 include ':jcvideoplayer-lib'
+include ':gsyVideoPlayer-java'
+include ':playerview'

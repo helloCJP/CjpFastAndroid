@@ -48,7 +48,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -77,10 +78,16 @@
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".effects.ball.AccelerometerBallActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".video.MyMediaPlayerActivity"
+        <activity android:name=".video.jiecao.MyMediaPlayerActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".lottie.LottieActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".video.gsyvideoplayer.VideoPalyerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".video.ijkplayerview.IjkPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
