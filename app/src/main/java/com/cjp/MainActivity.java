@@ -2,9 +2,13 @@ package com.cjp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -14,20 +18,24 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.cjp.activity.PhoneInfoActivity;
 import com.cjp.draw.DrawActivity;
 import com.cjp.effects.EffectsActivity;
 import com.cjp.effects.attrandani.DiscoverActivity;
 import com.cjp.effects.ball.AccelerometerBallActivity;
+import com.cjp.floatView.FloatActivity;
 import com.cjp.lottie.LottieActivity;
 import com.cjp.recycleview.RecycleviewActivity;
 import com.cjp.refresh.RefreshActivity;
 import com.cjp.slidingconflict.SlidingConflictActivity2;
 import com.cjp.test.TestActivity;
 import com.cjp.test.TouchTestActivity;
+import com.cjp.util.NotificationsUtils;
 import com.cjp.util.ToastUtil;
 import com.cjp.video.gsyvideoplayer.VideoPalyerActivity;
 import com.cjp.video.ijkplayerview.IjkPlayerActivity;
@@ -73,7 +81,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         mWindowManager = (WindowManager) getApplication().getSystemService(Context.WINDOW_SERVICE);
         Log.i(TAG, "mWindowManager3--->" + mWindowManager);
         wmParams.type = WindowManager.LayoutParams.TYPE_PHONE;
-        wmParams.format = PixelFormat.RGBA_8888;;
+        wmParams.format = PixelFormat.RGBA_8888;
         wmParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
         wmParams.gravity = Gravity.LEFT | Gravity.TOP;
         wmParams.x = 0;
@@ -151,6 +159,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         data.add("ijkplayer  test");
         data.add(" 打开 悬浮窗  测试");
         data.add(" 关闭 悬浮窗  测试");
+        data.add(" 磁性悬浮窗");
         return data;
     }
 
@@ -205,6 +214,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 break;
             case 15 :
                 close();
+                break;
+            case 16 :
+                intent = new Intent(this, FloatActivity.class);
                 break;
             default:
                 ToastUtil.showToast(this, "没有设置这个item的点击事件: " + data.get(position));
