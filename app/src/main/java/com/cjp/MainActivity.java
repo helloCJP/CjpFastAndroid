@@ -33,6 +33,7 @@ import com.cjp.lottie.LottieActivity;
 import com.cjp.recycleview.RecycleviewActivity;
 import com.cjp.refresh.RefreshActivity;
 import com.cjp.slidingconflict.SlidingConflictActivity2;
+import com.cjp.surface.SurfaceActivity;
 import com.cjp.test.TestActivity;
 import com.cjp.test.TouchTestActivity;
 import com.cjp.util.NotificationsUtils;
@@ -160,6 +161,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         data.add(" 打开 悬浮窗  测试");
         data.add(" 关闭 悬浮窗  测试");
         data.add(" 磁性悬浮窗");
+        data.add(" Surface Demo");
         return data;
     }
 
@@ -217,6 +219,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 break;
             case 16 :
                 intent = new Intent(this, FloatActivity.class);
+                break;
+            case 17 :
+                intent = new Intent(this, SurfaceActivity.class);
                 break;
             default:
                 ToastUtil.showToast(this, "没有设置这个item的点击事件: " + data.get(position));
