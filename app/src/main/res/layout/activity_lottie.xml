@@ -12,19 +12,19 @@
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:lottie_fileName="lottie/demo1.json"
+            app:lottie_fileName="app/see.json"
             app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
         <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:lottie_fileName="lottie/demo2.json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="app/tj.json"
             app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
         <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:lottie_fileName="lottie/demo3.json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="app/vip.json"
             app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
         <com.airbnb.lottie.LottieAnimationView
@@ -46,11 +46,16 @@
             app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
         <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/demo7"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            app:lottie_fileName="lottie/demo7.json"
-            app:lottie_loop="true"
             app:lottie_autoPlay="true"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/eee"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:lottie_autoPlay="true"
+           />
     </LinearLayout>
 
 </ScrollView>

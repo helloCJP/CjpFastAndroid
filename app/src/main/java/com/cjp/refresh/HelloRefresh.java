@@ -313,7 +313,7 @@ public abstract class HelloRefresh<T extends View> extends LinearLayout {
                 currentStatus = STATUS_PULL_TO_LOAD_MORE ;
             }
         }
-        scrollBy(0, -deltaY);
+//        scrollBy(0, -deltaY);
         Log.i(TAG, "changeScrollY:     scrollY = " + getScrollY() + "   deltay = " + deltaY + "  paddingTop = " + getPaddingTop() + "   mInitScrollY = " + headLayout.getMeasuredHeight());
 //        int slop = mInitScrollY / 2;
 

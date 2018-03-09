@@ -95,6 +95,11 @@
         <activity android:name=".surface.SurfaceActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
+        <activity android:name=".HelpTestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
     </application>
 
 </manifest>

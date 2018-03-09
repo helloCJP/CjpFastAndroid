@@ -162,6 +162,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         data.add(" 关闭 悬浮窗  测试");
         data.add(" 磁性悬浮窗");
         data.add(" Surface Demo");
+        data.add(" Help  me ");
         return data;
     }
 
@@ -222,6 +223,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 break;
             case 17 :
                 intent = new Intent(this, SurfaceActivity.class);
+                break;
+            case 18 :
+                intent = new Intent(this, HelpTestActivity.class);
                 break;
             default:
                 ToastUtil.showToast(this, "没有设置这个item的点击事件: " + data.get(position));
