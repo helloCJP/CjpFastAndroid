@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.cjp.activity.AnimaTestActivity;
 import com.cjp.activity.PhoneInfoActivity;
 import com.cjp.draw.DrawActivity;
 import com.cjp.effects.EffectsActivity;
@@ -30,6 +31,7 @@ import com.cjp.effects.attrandani.DiscoverActivity;
 import com.cjp.effects.ball.AccelerometerBallActivity;
 import com.cjp.floatView.FloatActivity;
 import com.cjp.lottie.LottieActivity;
+import com.cjp.palette.PaletteActivity;
 import com.cjp.recycleview.RecycleviewActivity;
 import com.cjp.refresh.RefreshActivity;
 import com.cjp.slidingconflict.SlidingConflictActivity2;
@@ -163,6 +165,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         data.add(" 磁性悬浮窗");
         data.add(" Surface Demo");
         data.add(" Help  me ");
+        data.add(" 画板");
+        data.add(" 补间动画测试");
         return data;
     }
 
@@ -226,6 +230,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 break;
             case 18 :
                 intent = new Intent(this, HelpTestActivity.class);
+                break;
+            case 19 :
+                intent = new Intent(this, PaletteActivity.class);
+                break;
+            case 20 :
+                intent = new Intent(this, AnimaTestActivity.class);
                 break;
             default:
                 ToastUtil.showToast(this, "没有设置这个item的点击事件: " + data.get(position));

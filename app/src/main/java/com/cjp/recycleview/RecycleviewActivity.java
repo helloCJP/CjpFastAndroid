@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.cjp.R;
+import com.cjp.layoutmanager.TestLayoutManager;
 
 import java.util.ArrayList;
 
@@ -37,7 +38,7 @@ public class RecycleviewActivity extends Activity {
     private void initRecycler(){
         adapter = new RecycleAdapter(this);
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new TestLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 
         refreshLayout.setProgressBackgroundColorSchemeResource(android.R.color.white);
@@ -79,7 +80,7 @@ public class RecycleviewActivity extends Activity {
     private ArrayList<String> data = new ArrayList<>();
     private void getData(){
         int size = data.size();
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 50; i++){
             data.add("这是第" + (size + i) + "个数据");
         }
     }

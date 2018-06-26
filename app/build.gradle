@@ -11,10 +11,15 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 //
-//        ndk {
+        ndk {
 ////APP的build.gradle设置支持的SO库架构
-//            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
-//        }
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+        }
+        manifestPlaceholders = [
+
+                XG_ACCESS_ID :"2100276873",
+                XG_ACCESS_KEY : "ATM3R722G3NI",
+        ]
     }
     buildTypes {
         release {
@@ -34,7 +39,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     compile 'com.android.support:support-v4:25.2.0'
@@ -44,4 +49,11 @@ dependencies {
     compile 'com.airbnb.android:lottie:2.1.2'
     compile project(':gsyVideoPlayer-java')
     compile project(':playerview')
+
+    //信鸽jar
+    compile 'com.tencent.xinge:xinge:3.2.3-release'
+    //wup包
+    compile 'com.tencent.wup:wup:1.0.0.E-release'
+    //mid包
+    compile 'com.tencent.mid:mid:4.0.6-release'
 }

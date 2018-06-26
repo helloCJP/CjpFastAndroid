@@ -1,6 +1,6 @@
 package com.cjp.slidingconflict;
 
-import android.view.ViewGroup; 
+import android.view.ViewGroup;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Scroller;
+
+import com.cjp.R;
+
 import java.util.ArrayList;
 import java.util.List;
 /**

@@ -1,6 +1,7 @@
 package com.cjp.recycleview;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private ArrayList<String> data = new ArrayList<>();
     private Activity activity;
 
+    int colors[]={Color.MAGENTA,Color.BLUE, Color.CYAN, Color.RED, Color.GRAY, Color.GREEN};
+
     public RecycleAdapter(Activity activity){
         this.activity = activity;
     }
@@ -34,6 +37,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((ViewHolder)holder).mTextView.setText(data.get(position));
+        ((ViewHolder) holder).mTextView.setBackgroundColor(colors[position%colors.length]);
     }
 
     @Override
